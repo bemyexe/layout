@@ -1,3 +1,11 @@
+import {HistoryDates} from '../features';
+
+import './style.scss';
+
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <main className="app">
+      <HistoryDates />
+    </main>
+  );
 };
