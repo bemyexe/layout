@@ -1,6 +1,43 @@
+@use '/src/global-styles/screen-mixins.scss' as screen;
+
 .history-dates-container {
   max-width: 1440px;
   width: 100%;
   border-left: 1px solid var(--blue-dark-10);
   border-right: 1px solid var(--blue-dark-10);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    left: 50%;
+    height: 100%;
+    background: var(--blue-dark-10);
+    transform: translateX(-50%);
+    @include screen.mobile {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--blue-dark-10);
+    transform: translateY(-50%);
+    @include screen.mobile {
+      display: none;
+    }
+  }
+
+  .circle-position {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
