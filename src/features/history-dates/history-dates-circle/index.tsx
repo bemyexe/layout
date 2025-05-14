@@ -7,9 +7,5 @@ interface Props {
 }
 
 export const HistoryDatesCircle = ({className}: Props) => {
-  return (
-    <div className={clsx('history-dates-circle', className)}>
-      HistoryDatesCircle
-    </div>
-  );
+  return <div className={clsx('history-dates-circle', className)}></div>;
 };

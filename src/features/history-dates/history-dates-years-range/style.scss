@@ -1,0 +1,20 @@
+@use '/src/global-styles/screen-mixins.scss' as screen;
+
+.history-dates-years-range {
+  display: flex;
+  gap: 60px;
+  font-weight: 700;
+  font-size: clamp(56px, 16vw, 200px);
+
+  &__start {
+    color: var(--blue);
+  }
+
+  &__end {
+    color: var(--pink);
+  }
+
+  @include screen.mobile {
+    gap: 30px;
+  }
+}
